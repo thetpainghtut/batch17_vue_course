@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vue component in-browser</title>
+
+  <script type="text/javascript" src="vue.min.js"></script>
+
+</head>
+<body>
+  <div id="app">
+    <ol>
+      <todo-item
+        v-for="(todo,index) in todos"
+        v-bind:todo="todo"
+        v-bind:key="index"
+      ></todo-item>
+    </ol>
+
+  </div>
+
+  <script type="text/javascript">
+    // Define a new component called todo-item
+    Vue.component('todo-item', {
+      props: {
+        todo: Object
+      },
+      template: '<li>{{todo.text}}</li>'
+    })
+
+    var app = new Vue({
+      el: '#app',
+      data:{
+        todos:[
+          { text: 'Learn JavaScript'},
+          { text: 'Learn Vue'},
+          { text: 'Build something awesome'}
+        ]
+      }
+    })
+  </script>
+</body>
+</html>

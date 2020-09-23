@@ -1,0 +1,44 @@
+Directory
+---------
+  - node_modules
+    - needed package vendor / gitignore
+  - public
+    - starting point (index.html)
+  - src
+    - assets (photo, css, js)
+    - components (reusable js files)
+      - component (.vue / template, script, style)
+    - App.vue
+      - main component
+    - main.js
+      - application entry point
+      - create new vue instance
+      - render with App.vue
+  - package.json
+    - mark dependencies and versions
+
+Components
+----------
+  - template (HTML)
+    - create main element
+  - script (JS)
+    - export default
+    - data()
+  - style (CSS)
+    - scoped (effect only this component)
+
+Working with API
+----------------
+  - npm install axios
+  - main.js (import / define $http)
+  - call another components
+
+UI (using bootstrap - https://bootstrap-vue.org)
+--
+  - npm install vue bootstrap-vue
+  - import main.js (entry point)
+    - package
+    - Vue.use()
+    - import css file
+
+
